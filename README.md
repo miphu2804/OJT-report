@@ -9,9 +9,11 @@ Repo này là một website **Hugo** (theme `hugo-theme-learn`) dùng để vi�
 
 ## Chạy local
 
-Mở PowerShell tại thư mục:
+Mở PowerShell và `cd` vào thư mục repo (nơi có `config.toml`), ví dụ:
 
-`.\fcj-workshop-template-main\fcj-workshop-template-main`
+```powershell
+cd C:\Users\hieua\Downloads\fcj-workshop-template-main
+```
 
 Chạy:
 
@@ -59,4 +61,3 @@ Repo đã có override shortcode `notice` để **không render** loại `warnin
 - `layouts/shortcodes/notice.html`
 
 Nếu muốn hiện lại warning, bạn có thể chỉnh file này theo nhu cầu.
-
