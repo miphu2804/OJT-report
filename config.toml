@@ -20,6 +20,8 @@ home = [ "HTML", "RSS", "JSON"]
   showVisitedLinks = true
   disableBreadcrumb = false
   disableNextPrev = false
+  collapsibleMenu = true
+  alwaysopen = false
   
 [Languages]
 [Languages.en]
