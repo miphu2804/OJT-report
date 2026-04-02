@@ -10,24 +10,39 @@ pre: " <b> 4. </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+<div align="center">
+<h1>
+Hệ thống hỗ trợ học tập<br/>
+và giám sát thi bằng AI Camera<br/>
+Edutrust
+</h1>
+</div>
 
 #### Tổng quan
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+EduTrust là hệ thống hỗ trợ học tập và giám sát thi bằng AI Camera, được triển khai trên kiến trúc AWS để đảm bảo khả năng mở rộng, bảo mật và vận hành ổn định. Workshop này hướng dẫn bối cảnh setup hệ thống và quy trình triển khai chuẩn cho nhóm.
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+Trong workshop, chúng ta sẽ thiết lập hạ tầng bằng Terraform trong CI/CD, cấu hình backend services và frontend trên AWS Amplify, đồng thời tích hợp chatbot hỗ trợ học tập và AI Camera giám sát thi.
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
+Quy trình được chia thành các phần chính:
+
++ **Hạ tầng** - Tạo VPC, ALB, EC2 Auto Scaling, S3, ECR, IAM bằng Terraform và xác minh outputs.
++ **Ứng dụng** - Deploy frontend qua Amplify và backend services qua pipeline, cấu hình biến môi trường và secrets.
++ **Giám sát & bảo mật** - Bật WAF, cấu hình CloudWatch alarms, và thiết lập cảnh báo qua SNS.
 
 #### Nội dung
 
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+1. [Tổng quan kiến trúc](5.1-architecture-overview/)
+2. [Prerequisites](5.2-prerequisites/)
+3. [Fork & Clone Repo](5.3-fork-clone-repo/)
+4. [GitHub Secrets](5.4-github-secrets/)
+5. [Terraform Variables](5.5-terraform-variables/)
+6. [Backend Env Variables](5.6-backend-env-variables/)
+7. [Terraform Infrastructure](5.7-terraform-infrastructure/)
+8. [Frontend — AWS Amplify](5.8-frontend-amplify/)
+9. [CI/CD Pipeline](5.9-cicd-pipeline/)
+10. [Custom Domain & HTTPS](5.10-custom-domain-https/)
+11. [WAF Frontend](5.11-waf-frontend/)
+12. [Monitoring & Alarms](5.12-monitoring-alarms/)
+13. [Kiểm tra hệ thống](5.13-system-checks/)
+14. [Dọn dẹp](5.14-cleanup/)

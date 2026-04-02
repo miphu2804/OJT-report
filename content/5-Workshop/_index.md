@@ -9,23 +9,25 @@ pre: " <b> 4. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}}
 
-# Secure Hybrid Access to S3 using VPC Endpoints
+# Team Project Setup Workshop: Learning Support System
 
 #### Overview
 
-**AWS PrivateLink** provides private connectivity to AWS services from VPCs and your on-premises networks, without exposing your traffic to the Public Internet.
-
-In this lab, you will learn how to create, configure, and test VPC endpoints that enable your workloads to reach AWS services without traversing the Public Internet.
-
-You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoint, and an Interface VPC endpoint. These two types of VPC endpoints offer different benefits depending on if you are accessing Amazon S3 from the cloud or your on-premises location
-+ **Gateway** - Create a gateway endpoint to send traffic to Amazon S3 or DynamoDB using private IP addresses.You route traffic from your VPC to the gateway endpoint using route tables.
-+ **Interface** - Create an interface endpoint to send traffic to endpoint services that use a Network Load Balancer to distribute traffic. Traffic destined for the endpoint service is resolved using DNS.
+This workshop guides the team setup for a learning support system that uses a chatbot and camera-based cheating detection. FE/BE is deployed on AWS and automated with Terraform in CI/CD.
 
 #### Content
 
-1. [Workshop overview](5.1-Workshop-overview)
-2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+1. [Architecture overview](5.1-architecture-overview)
+2. [Prerequisites](5.2-prerequisites/)
+3. [Fork & Clone Repo](5.3-fork-clone-repo/)
+4. [GitHub Secrets](5.4-github-secrets/)
+5. [Terraform Variables](5.5-terraform-variables/)
+6. [Backend Env Variables](5.6-backend-env-variables/)
+7. [Terraform Infrastructure](5.7-terraform-infrastructure/)
+8. [Frontend — AWS Amplify](5.8-frontend-amplify/)
+9. [CI/CD Pipeline](5.9-cicd-pipeline/)
+10. [Custom Domain & HTTPS](5.10-custom-domain-https/)
+11. [WAF Frontend](5.11-waf-frontend/)
+12. [Monitoring & Alarms](5.12-monitoring-alarms/)
+13. [System checks](5.13-system-checks/)
+14. [Clean up](5.14-cleanup/)
