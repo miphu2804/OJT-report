@@ -6,23 +6,23 @@ chapter : false
 pre : " <b> 4.7.2 </b> "
 ---
 
-#### Goal
+#### Objectives
 
-Send email notifications when CloudWatch alarms exceed thresholds.
+Set up alerts to send emails when a CloudWatch Alarm exceeds a threshold, helping you respond early to incidents.
 
-#### Create SNS Topic
+#### Set up SNS Topic
 
-1. Create an SNS Topic for alerts.
-2. Subscribe email recipients and confirm the subscription.
+1. Create an SNS Topic for the alerting system.
+2. Register an email address to receive alerts and confirm the subscription.
 
 #### Create CloudWatch Alarm
 
-1. Select metrics to monitor (ALB 5xx, CPU/Memory, instance unhealthy).
-2. Set thresholds and evaluation periods.
-3. Attach the SNS Topic to the alarm.
+1. Select the metrics to monitor (ALB 5xx, CPU/Memory, unhealthy instances).
+2. Set an appropriate threshold and evaluation period.
+3. Attach the alarm to the SNS Topic to send an email when the threshold is exceeded.
 
-#### Verification
+#### Verify Operation
 
-1. Trigger a test condition to fire the alarm.
-2. Confirm the email is delivered.
-3. Ensure the alert contains sufficient troubleshooting context.
+1. Simulate conditions to exceed the threshold and trigger the alarm.
+2. Confirm the alert email is sent successfully.
+3. Check the alert content to ensure it provides enough information for tracing.

@@ -1,47 +1,107 @@
 ---
 title : "Architecture Overview"
 date : 2024-01-01 
-weight : 1 
+weight : 1
 chapter : false
 pre : " <b> 4.1. </b> "
 ---
 
 #### Introduction
 
-EduTrust is a learning support system with AI chatbot assistance and AI camera-based exam monitoring. It is deployed on AWS to ensure scalability, security, and stable operations.
+EduTrust is an AI Camera-based learning support and exam supervision system deployed on AWS to ensure scalability, security, and stable operation. This workshop focuses on setting up the architecture and standard deployment flow for the team.
 
-#### High-Level AWS Architecture
+#### AWS Architecture Overview
 
 Internet → Amplify → Application Load Balancer → EC2 Auto Scaling → Backend services
 
-#### Core Components (By Layer)
+![EduTrust Architecture](edutrust-architect.png)
+
+#### Main Components (by layer)
 
 **Client/Presentation Layer**
 
-- AWS Amplify: host the frontend and connect the custom domain.
++ **Amplify**: Hosts the frontend and connects to custom domains.
 
 **Traffic/Delivery Layer**
 
-- Application Load Balancer: routes traffic to backend services.
++ **Application Load Balancer**: Distributes requests to the backend.
 
 **Compute/Service Layer**
 
-- EC2 Auto Scaling: runs backend services based on load.
-- Backend services: API, AI processing, camera events, auth.
++ **EC2 Auto Scaling**: Runs backend services based on load.
++ **Backend services**: APIs, AI processing, camera events, and authentication.
 
 **Data Layer**
 
-- Data storage: logs, videos, and exam results (S3/DB).
++ **Data**: Stores logs, videos, and exam results (S3/DB).
 
-#### High Availability (HA) & Multi-AZ
+#### List of Services Used
 
-- EC2 Auto Scaling spans multiple AZs for HA.
-- ALB distributes traffic across AZs.
-- Managed data services (RDS/S3) increase durability.
+**Frontend & Edge Layer**
 
-#### Main Flow
++ AWS Amplify
++ AWS WAF
++ AWS Route 53
++ AWS ACM
+
+**Identity Layer**
+
++ Amazon Cognito
+
+**Networking Layer**
+
++ Amazon VPC (public/private subnets)
++ Internet Gateway
++ NAT Gateway
++ Application Load Balancer
+
+**Compute & Container Layer**
+
++ Amazon EC2
++ EC2 Auto Scaling
++ Amazon ECR
+
+**Data & Storage Layer**
+
++ Amazon S3 (frontend assets, logs, Terraform state)
++ Amazon RDS
++ Amazon ElastiCache for Redis
+
+**Observability Layer**
+
++ Amazon CloudWatch
++ VPC Flow Logs
++ Amazon SNS
+
+**Security & Configuration Layer**
+
++ AWS KMS
++ AWS Systems Manager Parameter Store
++ AWS PrivateLink
+
+**CI/CD & IaC Layer**
+
++ GitHub Actions
++ Packer
++ Terraform
+
+#### High Availability (HA) and Multi-AZ
+
++ EC2 Auto Scaling runs across multiple Availability Zones (AZs) to ensure HA.
++ Application Load Balancer automatically distributes traffic across AZs.
++ Critical data is stored on managed services (RDS/S3) to increase durability.
+
+#### Architecture and Responsibilities Overview
+
++ **Amplify**: Serves the user interface, manages domain connectivity, and handles HTTPS.
++ **Application Load Balancer**: Acts as the orchestration layer, routing requests to the backend.
++ **EC2 Auto Scaling**: Ensures the backend scales automatically as load increases.
++ **Backend services**: Handles business logic, AI, camera events, and authentication.
++ **Data layer**: Stores exam data, logs, video, and results.
+
+#### Main Flow in the Workshop
 
 1. Users access the frontend via Amplify.
-2. Frontend calls APIs through the Application Load Balancer.
-3. Backend handles business logic, AI processing, and camera events.
-4. Data is stored and presented back to users.
+2. The frontend calls APIs through the Application Load Balancer.
+3. The backend processes logic, invokes AI services, and receives events from the camera.
+4. Data is stored and displayed back to the user.

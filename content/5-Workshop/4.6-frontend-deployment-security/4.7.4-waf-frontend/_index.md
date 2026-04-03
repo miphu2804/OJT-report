@@ -6,21 +6,27 @@ chapter : false
 pre : " <b> 4.6.4 </b> "
 ---
 
-#### Goal
+#### Objectives
 
-Protect the frontend edge layer (CloudFront) with WAF.
+Protect the frontend layer (CloudFront) using WAF.
 
 #### Deployment Steps
 
-1. Create a Web ACL in AWS WAF.
-2. Choose CloudFront scope and add basic managed rule groups.
+1. Create a Web ACL on AWS WAF.
+2. Select the CloudFront scope and add basic managed rule groups.
 3. Attach the Web ACL to the Amplify CloudFront distribution.
 
-#### Rule Verification
+#### Verify Rule Operation
 
-1. Test with rate limiting or a temporary IP block.
-2. Observe logs/metrics for false positives.
+1. Try applying a rate limit or IP block to confirm the rule is effective.
+2. Monitor logs/metrics in CloudWatch to evaluate false positives.
+
+1. Go to AWS WAF, create Web ACL.
+2. Select CloudFront scope and add managed rule groups.
+3. Open the Amplify CloudFront Distribution.
+4. Select the newly created Web ACL in the WAF section.
+5. Save the configuration and wait for the update to complete.
 
 #### Note
 
-Start in monitor mode before switching to block.
+1. Prioritize enabling monitor mode before switching to block.

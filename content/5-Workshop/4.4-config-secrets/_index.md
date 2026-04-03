@@ -8,7 +8,9 @@ pre : " <b> 4.4. </b> "
 
 #### Overview
 
-This section covers secrets and environment variables for infrastructure and backend runtime.
+<p style="text-align: justify;">
+In this section, you will set up and store environment variables for the backend and Terraform. The content focuses on standardizing configuration to ensure consistency during deployment and operation across environments. Systematically managing environment variables helps reduce configuration drift between environments (staging/production), enhances risk control, and facilitates technical audits.
+</p>
 
 #### Content
 

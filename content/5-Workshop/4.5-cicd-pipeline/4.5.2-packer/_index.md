@@ -6,19 +6,42 @@ chapter : false
 pre : " <b> 4.5.2 </b> "
 ---
 
-#### Trigger
+#### Tasks Included in Job Packer
 
-- Manual workflow_dispatch.
-- workflow_run success from upstream.
+**Trigger**
 
-#### Main tasks
+- Manual execution via workflow_dispatch (when necessary).
+- Automatically runs when the previous workflow completes successfully (workflow_run = success).
 
-1. Prepare build environment and AWS credentials.
-2. Initialize Packer and check build conditions.
-3. Create temporary VPC for AMI build.
-4. Clean old AMIs and build a new AMI.
-5. Cleanup temporary networking.
+**Main Task Groups**
 
-#### Purpose
+1. **Environment Preparation**
+   - Checkout source code and set up Packer.
+   - Configure AWS credentials to create temporary build resources.
 
-Standardize backend images for consistent deployment.
+2. **Initialization and Build Condition Check**
+   - Packer init in the configuration directory.
+   - Calculate template hash and check if the AMI already exists to avoid rebuilding.
+
+3. **Create Temporary VPC for Packer**
+   - Create a VPC, Internet Gateway, Subnet, and Route for the build process.
+
+4. **Clean up Old AMI and Build New AMI**
+   - Deregister old AMIs with the same name and delete associated snapshots.
+   - Build the new AMI and attach a hash for configuration tracking.
+
+5. **Cleanup after Build**
+   - Delete temporary network infrastructure in reverse order.
+
+**Workflow Flow**
+
+- Job is triggered via workflow_dispatch or workflow_run (success).
+- Set up Packer and AWS credentials to gain permission for temporary resource creation.
+- Packer init, compute configuration hash; if the corresponding AMI exists and build is not forced, stop.
+- Create temporary network (VPC, IGW, Subnet, Route) to build the AMI.
+- Deregister old AMI with same name, delete snapshot, then build new AMI with hash tag.
+- Clean up all temporary network resources after the build.
+
+#### Role
+
+Standardizes the backend runtime environment and ensures consistent deployment images between builds.

@@ -5,22 +5,23 @@ weight : 8
 chapter : false
 pre : " <b> 4.8. </b> "
 ---
-#### Cleanup with terraform destroy
 
-1. Run from the Terraform directory or through CI/CD.
-2. Execute:
-```
+#### Cleanup using terraform destroy
+
+1. Navigate to the Terraform directory or run via CI/CD.
+2. Execute the command:
+```bash
 terraform destroy
 ```
-3. Confirm the action when prompted.
+3. Confirm the operation when prompted.
 
-#### Manual cleanup
+#### Resources to Delete Manually
 
-1. **ACM certificates**: remove unused certificates.
-2. **CloudFront/Amplify**: delete distributions or apps if still present.
-3. **Logs/Snapshots**: delete unused log groups and snapshots.
+1. **ACM certificates**: Delete certificates that are no longer in use.
+2. **CloudFront/Amplify**: Delete distributions or apps if they still exist.
+3. **Logs/Snapshots**: Delete unnecessary log groups and snapshots.
 
-#### Verify deletion
+#### Verify Successful Deletion Status
 
-1. Ensure Terraform state has no remaining resources.
-2. Check AWS Console for any billable leftovers.
+1. Check that the Terraform state contains no resources.
+2. Access the AWS Console to confirm that no billable resources remain.
