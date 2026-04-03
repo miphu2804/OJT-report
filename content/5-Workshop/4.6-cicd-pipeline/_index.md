@@ -1,9 +1,9 @@
 ---
 title : "CI/CD Pipeline"
 date : 2024-01-01
-weight : 9
+weight : 6
 chapter : true
-pre : " <b> 4.9. </b> "
+pre : " <b> 4.6. </b> "
 ---
 
 #### Flow diagram

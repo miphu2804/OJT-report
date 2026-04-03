@@ -14,10 +14,10 @@ Mục này hướng dẫn triển khai frontend trên AWS Amplify và cấu hìn
 
 #### Nội dung
 
-1. [Setup FE bằng Amplify](4.6.1-setup-amplify-frontend/)
-2. [Cognito](4.6.2-cognito/)
-3. [Custom Domain & HTTPS](4.6.3-custom-domain-https/)
-4. [WAF Frontend](4.6.4-waf-frontend/)
+1. [Setup FE bằng Amplify](4.7.1-setup-amplify-frontend/)
+2. [Cognito](4.7.2-cognito/)
+3. [Custom Domain & HTTPS](4.7.3-custom-domain-https/)
+4. [WAF Frontend](4.7.4-waf-frontend/)
 
 
 

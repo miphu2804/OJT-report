@@ -1,9 +1,9 @@
 ---
 title : "Terraform Infrastructure"
 date : 2024-01-01
-weight : 7
+weight : 5
 chapter : true
-pre : " <b> 4.7. </b> "
+pre : " <b> 4.5. </b> "
 ---
 
 #### How to run

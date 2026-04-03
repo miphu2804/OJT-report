@@ -26,8 +26,8 @@ Pipeline được kích hoạt khi có thay đổi được merge vào nhánh ma
 
 #### Nội dung
 
-1. [Job CI](4.7.1-ci/)
-2. [Job Packer](4.7.2-packer/)
-3. [Job Terraform](4.7.3-terraform/)
-4. [Job Build ECR](4.7.4-build-ecr/)
-5. [Job ASG Rolling Update](4.7.5-asg-rolling-update/)
+1. [Job CI](4.6.1-ci/)
+2. [Job Packer](4.6.2-packer/)
+3. [Job Terraform](4.6.3-terraform/)
+4. [Job Build ECR](4.6.4-build-ecr/)
+5. [Job ASG Rolling Update](4.6.5-asg-rolling-update/)
