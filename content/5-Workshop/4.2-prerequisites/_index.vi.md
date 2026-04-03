@@ -22,58 +22,32 @@ pre : " <b> 4.2. </b> "
 + **uv**: quản lý môi trường và dependencies Python nhanh.
 + **Docker**: build image và chạy service nhất quán.
 
-#### Cài đặt cho môi trường Staging/Production (Ubuntu/Debian)
+#### Cài đặt các gói cần thiết để sử dụng (Windows)
 
-1. **Cập nhật hệ thống**
+1. **Cài Chocolatey (nếu chưa có)**
 ```
-sudo apt update
-sudo apt -y upgrade
+Set-ExecutionPolicy Bypass -Scope Process -Force
+[System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 ```
-2. **Cài Docker**
+2. **Cài Docker Desktop**
 ```
-sudo apt -y install docker.io
-sudo systemctl enable --now docker
+choco install docker-desktop -y
 ```
 3. **Cài Node.js (LTS)**
 ```
-sudo apt -y install nodejs npm
+choco install nodejs-lts -y
 ```
 4. **Cài Python 3.11**
 ```
-sudo apt -y install python3.11
-sudo apt -y install python3.11-venv
-sudo apt -y install python3.11-dev
+choco install python --version=3.11.9 -y
 ```
 5. **Cài uv**
 ```
-curl -LsSf https://astral.sh/uv/install.sh | sh
+powershell -ExecutionPolicy Bypass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 6. **Cài Terraform 1.14.6**
 ```
-sudo apt -y install wget
-sudo apt -y install unzip
-wget https://releases.hashicorp.com/terraform/1.14.6/terraform_1.14.6_linux_amd64.zip
-unzip terraform_1.14.6_linux_amd64.zip
-sudo mv terraform /usr/local/bin/terraform
+choco install terraform --version=1.14.6 -y
 ```
 
-#### API keys cần có và cách lấy
-
-1. **AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY**
-   + Tạo IAM user/role có quyền deploy.
-   + Lấy Access Key trong AWS IAM → Security credentials.
-2. **API key cho AI/LLM (chatbot)**
-   + Tạo API key tại nhà cung cấp AI (OpenAI/Anthropic/Google...).
-   + Lưu vào secrets để dùng trong backend.
-3. **Email service key (nếu dùng)**
-   + Tạo credential trên SES/SendGrid/Mailgun.
-   + Lưu SMTP user/password vào secrets.
-4. **Auth provider (nếu dùng Cognito)**
-   + Tạo User Pool và App Client.
-   + Lấy `COGNITO_USER_POOL_ID` và `COGNITO_CLIENT_ID`.
-
-#### API keys cần có
-
-+ AWS access key và secret key.
-+ API key cho AI/LLM (chatbot).
-+ Các khóa dịch vụ email hoặc auth nếu dùng.

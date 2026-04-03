@@ -33,11 +33,10 @@ Quy trình được chia thành các phần chính:
 #### Nội dung
 
 1. [Tổng quan kiến trúc](4.1-architecture-overview/)
-2. [Prerequisites](4.2-prerequisites/)
+2. [Cài đặt môi trường](4.2-prerequisites/)
 3. [Fork & Clone Repo](4.3-fork-clone-repo/)
 4. [Cấu hình & Secrets](4.4-config-secrets/)
-5. [Terraform Infrastructure](4.5-terraform-infrastructure/)
-6. [CI/CD Pipeline](4.6-cicd-pipeline/)
-7. [Frontend Deployment & Security](4.7-frontend-deployment-security/)
-8. [Observability & Validation](4.8-observability-validation/)
-9. [Dọn dẹp](4.9-cleanup/)
+5. [Hướng dẫn chạy CI/CD](4.5-cicd-pipeline/)
+6. [Frontend Deployment & Security](4.6-frontend-deployment-security/)
+7. [Observability & Validation](4.7-observability-validation/)
+8. [Dọn dẹp](4.8-cleanup/)

@@ -14,13 +14,76 @@ EduTrust là hệ thống hỗ trợ học tập và giám sát thi bằng AI Ca
 
 Internet → Amplify → Application Load Balancer → EC2 Auto Scaling → Backend services
 
-#### Thành phần chính
+![Kiến trúc EduTrust](edutrust-architect.png)
+
+#### Thành phần chính (theo layer)
+
+**Client/Presentation Layer**
 
 + **Amplify**: host frontend và kết nối custom domain.
+
+**Traffic/Delivery Layer**
+
 + **Application Load Balancer**: phân phối request vào backend.
+
+**Compute/Service Layer**
+
 + **EC2 Auto Scaling**: chạy các backend services theo tải.
 + **Backend services**: API, xử lý AI, camera events, auth.
+
+**Data Layer**
+
 + **Data**: lưu trữ log, video, và kết quả bài thi (S3/DB).
+
+#### Danh sách dịch vụ sử dụng
+
+**Lớp giao diện & biên (Frontend & Edge)**
+
++ AWS Amplify
++ AWS WAF
++ AWS Route 53
++ AWS ACM
+
+**Lớp định danh (Identity)**
+
++ Amazon Cognito
+
+**Lớp mạng (Networking)**
+
++ Amazon VPC (public/private subnets)
++ Internet Gateway
++ NAT Gateway
++ Application Load Balancer
+
+**Lớp tính toán & container (Compute & Container)**
+
++ Amazon EC2
++ EC2 Auto Scaling
++ Amazon ECR
+
+**Lớp dữ liệu & lưu trữ (Data & Storage)**
+
++ Amazon S3 (frontend assets, logs, Terraform state)
++ Amazon RDS
++ Amazon ElastiCache for Redis
+
+**Lớp quan sát & giám sát (Observability)**
+
++ Amazon CloudWatch
++ VPC Flow Logs
++ Amazon SNS
+
+**Lớp bảo mật & cấu hình (Security & Configuration)**
+
++ AWS KMS
++ AWS Systems Manager Parameter Store
++ AWS PrivateLink
+
+**Lớp tự động hoá triển khai & IaC (CI/CD & IaC)**
+
++ GitHub Actions
++ Packer
++ Terraform
 
 #### Tính sẵn sàng cao (HA) và Multi-AZ
 
