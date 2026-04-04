@@ -1,15 +1,10 @@
 ---
-title: "Worklog Tuần 4"
+title: "1.4. Tuần 4: S3 & Static Web"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 4:
 
 * Kết nối, làm quen với các thành viên trong First Cloud Journey.

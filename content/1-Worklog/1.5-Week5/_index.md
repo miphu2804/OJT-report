@@ -1,15 +1,10 @@
 ---
-title: "Week 5 Worklog"
+title: "1.5. Week 5: Monitoring and security"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 5 Objectives:
 
 * Connect and get acquainted with members of First Cloud Journey.

@@ -1,15 +1,10 @@
 ---
-title: "Worklog Tuần 2"
+title: "1.2. Tuần 2: Tìm hiểu mạng & kết nối"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 2:
 
 * Kết nối, làm quen với các thành viên trong First Cloud Journey.

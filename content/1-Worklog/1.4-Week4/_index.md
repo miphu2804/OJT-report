@@ -1,15 +1,10 @@
 ---
-title: "Week 4 Worklog"
+title: "1.4. Week 4: S3 and static web delivery"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 4 Objectives:
 
 * Connect and get acquainted with members of First Cloud Journey.

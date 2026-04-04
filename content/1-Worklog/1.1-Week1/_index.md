@@ -1,15 +1,10 @@
 ---
-title: "Week 1 Worklog"
+title: "1.1. Week 1: First steps to the cloud with FCAJ Bootcamp"
 date: 2024-01-01
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
-
 ### Week 1 Objectives:
 
 * Connect and get acquainted with members of First Cloud Journey.
