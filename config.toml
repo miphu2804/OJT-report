@@ -1,5 +1,5 @@
-baseURL = "http://localhost:1313/"
-relativeURLs = false
+baseURL = "https://se190348-nguyen-minh-phu.vercel.app/"
+relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
 
