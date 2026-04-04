@@ -1,4 +1,4 @@
-baseURL = "https://se190348-nguyen-minh-phu.vercel.app/"
+baseURL = "/"
 relativeURLs = true
 canonifyURLs = false
 defaultContentLanguage = "en"
