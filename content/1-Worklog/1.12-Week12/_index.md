@@ -1,5 +1,5 @@
 ---
-title: "1.12. Week 12: Presentation"
+title: "Week 12: Presentation"
 date: 2024-01-01
 weight: 2
 chapter: false

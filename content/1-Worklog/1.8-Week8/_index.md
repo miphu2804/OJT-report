@@ -1,5 +1,5 @@
 ---
-title: "1.8. Week 8: Packer and backend infrastructure"
+title: "Week 8: Packer and backend infrastructure"
 date: 2024-01-01
 weight: 1
 chapter: false

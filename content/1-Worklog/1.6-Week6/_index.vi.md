@@ -1,5 +1,5 @@
 ---
-title: "1.6. Tuần 6: IaC & Container"
+title: "Tuần 6: IaC & Container"
 date: 2024-01-01
 weight: 1
 chapter: false

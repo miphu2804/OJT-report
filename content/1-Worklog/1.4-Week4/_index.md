@@ -1,5 +1,5 @@
 ---
-title: "1.4. Week 4: S3 and static web delivery"
+title: "Week 4: S3 and static web delivery"
 date: 2024-01-01
 weight: 1
 chapter: false

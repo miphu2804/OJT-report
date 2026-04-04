@@ -1,5 +1,5 @@
 ---
-title: "1.10. Tuần 10: Hoàn thiện kiến trúc"
+title: "Tuần 10: Hoàn thiện kiến trúc"
 date: 2024-01-01
 weight: 2
 chapter: false

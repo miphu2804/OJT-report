@@ -1,5 +1,5 @@
 ---
-title: "1.7. Week 7: Infrastructure and CI/CD"
+title: "Week 7: Infrastructure and CI/CD"
 date: 2024-01-01
 weight: 1
 chapter: false

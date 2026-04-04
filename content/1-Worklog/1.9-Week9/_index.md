@@ -1,5 +1,5 @@
 ---
-title: "1.9. Week 9: Native AWS and front-end"
+title: "Week 9: Native AWS and front-end"
 date: 2024-01-01
 weight: 1
 chapter: false

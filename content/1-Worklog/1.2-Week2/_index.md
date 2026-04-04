@@ -1,5 +1,5 @@
 ---
-title: "1.2. Week 2: Network and connectivity foundations"
+title: "Week 2: Network and connectivity foundations"
 date: 2024-01-01
 weight: 1
 chapter: false

@@ -1,5 +1,5 @@
 ---
-title: "1.5. Tuần 5: Giám sát & Bảo mật"
+title: "Tuần 5: Giám sát & Bảo mật"
 date: 2024-01-01
 weight: 1
 chapter: false

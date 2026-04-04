@@ -1,5 +1,5 @@
 ---
-title: "1.13. Tuần 13: Kiểm thử lỗi & Nộp báo cáo"
+title: "Tuần 13: Kiểm thử lỗi & Nộp báo cáo"
 date: 2024-01-01
 weight: 13
 chapter: false

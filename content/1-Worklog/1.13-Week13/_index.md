@@ -1,5 +1,5 @@
 ---
-title: "1.13. Week 13: Bug testing and report submission"
+title: "Week 13: Bug testing and report submission"
 date: 2024-01-01
 weight: 13
 chapter: false

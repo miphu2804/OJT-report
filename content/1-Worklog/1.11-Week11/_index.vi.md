@@ -1,5 +1,5 @@
 ---
-title: "1.11. Tuần 11: Tối ưu & Pentest"
+title: "Tuần 11: Tối ưu & Pentest"
 date: 2024-01-01
 weight: 2
 chapter: false

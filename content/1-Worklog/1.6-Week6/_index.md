@@ -1,5 +1,5 @@
 ---
-title: "1.6. Week 6: IaC and container basics"
+title: "Week 6: IaC and container basics"
 date: 2024-01-01
 weight: 1
 chapter: false

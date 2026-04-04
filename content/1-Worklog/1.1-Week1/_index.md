@@ -1,5 +1,5 @@
 ---
-title: "1.1. Week 1: First steps to the cloud with FCAJ Bootcamp"
+title: "Week 1: First steps to the cloud with FCAJ Bootcamp"
 date: 2024-01-01
 weight: 1
 chapter: false

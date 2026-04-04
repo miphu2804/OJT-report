@@ -1,5 +1,5 @@
 ---
-title: "1.4. Tuần 4: S3 & Static Web"
+title: "Tuần 4: S3 & Static Web"
 date: 2024-01-01
 weight: 1
 chapter: false

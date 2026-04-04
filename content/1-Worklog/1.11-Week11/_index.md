@@ -1,5 +1,5 @@
 ---
-title: "1.11. Week 11: Optimization and pentest"
+title: "Week 11: Optimization and pentest"
 date: 2024-01-01
 weight: 2
 chapter: false

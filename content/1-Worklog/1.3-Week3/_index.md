@@ -1,5 +1,5 @@
 ---
-title: "1.3. Week 3: Backup and cost awareness"
+title: "Week 3: Backup and cost awareness"
 date: 2024-01-01
 weight: 1
 chapter: false

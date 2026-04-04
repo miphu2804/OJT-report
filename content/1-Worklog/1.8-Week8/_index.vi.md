@@ -1,5 +1,5 @@
 ---
-title: "1.8. Tuần 8: Packer & Hạ tầng backend"
+title: "Tuần 8: Packer & Hạ tầng backend"
 date: 2024-01-01
 weight: 1
 chapter: false

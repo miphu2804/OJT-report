@@ -1,5 +1,5 @@
 ---
-title: "1.2. Tuần 2: Tìm hiểu mạng & kết nối"
+title: "Tuần 2: Tìm hiểu mạng & kết nối"
 date: 2024-01-01
 weight: 1
 chapter: false

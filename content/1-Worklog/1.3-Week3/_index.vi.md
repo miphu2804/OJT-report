@@ -1,5 +1,5 @@
 ---
-title: "1.3. Tuần 3: Backup & Chi phí"
+title: "Tuần 3: Backup & Chi phí"
 date: 2024-01-01
 weight: 1
 chapter: false
