@@ -6,121 +6,70 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Cloud Mastery Series: Exploring Generative AI
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Share best practices in modern application design, optimize performance using CloudFront (CDN) and S3 storage.
+- Introduce Prompt Engineering methods and workflows for building autonomous AI Agents.
+- Provide guidance on compute selection, from Edge devices (Raspberry Pi/Arduino) to Cloud services (Lambda/Fargate).
+- Present AI tools such as Proptimizer and Strands Agents for workflow automation.
 
-### Speakers
+### Speaker List & Detailed Content
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### 1. Banh Cam Vinh - Data Engineer (Building AI Agent with Strands)
 
-### Key Highlights
+- **Topic:** Building autonomous AI Agents.
+- **Main points:**
+- **Concept:** AI Agents do more than answer questions; they can plan, use tools (APIs, Databases), and make decisions.
+- **Strands Agents:** A framework that connects LLMs to the real world through "Tool definitions" and an "Agentic Loop."
+- **Advantage:** Accesses real-time data and executes complex workflows that pure LLMs cannot handle.
 
-#### Identifying the drawbacks of legacy application architecture
+#### 2. Nguyen Tuan Thinh - DevOps Engineer (Automated Prompt Engineering)
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- **Topic:** The art of communicating with AI and cost optimization.
+- **Main points:**
+- **Problem:** Generic prompts produce weak results, waste tokens, and increase cost (for example, Claude Opus at $25 per 1M output tokens).
+- **Solution:** Build structured prompts with 7 components: Role, Instruction, Context, Input, Output Format, Examples, and Constraints.
+- **Advanced techniques:** Chain-of-Thought (CoT), Tree-of-Thoughts (ToT), and RAG.
+- **Tool:** Proptimizer demo - a browser utility to optimize prompts and chat with AI anywhere.
 
-#### Transitioning to modern application architecture – Microservices
+#### 3. Aiden Dinh - Operation Engineer (AIoT Projects: Locker Management)
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- **Topic:** AIoT applications in real operations.
+- **Main points:**
+- **Smart Locker project:** Automates club item borrowing with face recognition instead of manual management.
+- **Hardware architecture:** Arduino collects sensor data (RFID, Reed Switch), Raspberry Pi acts as the MQTT Broker.
+- **Cloud services:**
+- **AWS IoT Core:** Central hub for secure device connectivity.
+- **Amazon Rekognition:** Image analysis for member verification.
+- **DynamoDB & S3:** Stores user information and event images.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
 
-#### Domain-Driven Design (DDD)
-
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
-
-#### Event-Driven Architecture
-
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
-
-#### Compute Evolution
-
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
+### What I Learned
 
 #### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
 #### Technical Architecture
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+- How to combine Serverless services (Lambda, API Gateway) with AI services (Bedrock, Rekognition) effectively.
+- Better understanding of how to design Event-driven architecture for systems involving hardware and real-time data.
 
 #### Modernization Strategy
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- Transitioning from isolated commands to Agent-based systems capable of multi-step reasoning.
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **Prompt optimization:** Apply the "Be Clear & Specific" principle and use delimiters to improve AI response quality.
+- **AI Agent experimentation:** Explore integrating Strands Agents into workflows that require data retrieval from internal APIs.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending **"Cloud Mastery Series: Exploring Generative AI"** was a practical and in-depth experience, helping me better understand how to apply GenAI to real products and run AI systems more effectively.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Hands-on technical experience
+- Watched a live **Smart Locker** demo and clearly understood how data flows from sensors to the Cloud, then returns face recognition results within seconds.
+- Observed how hardware (Arduino/Raspberry Pi) can be combined with AWS services to build AIoT solutions ready for real deployment.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+#### Lessons learned about cost and efficiency
+- Understood that prompt optimization and agent architecture are key factors in balancing quality, speed, and operating cost.

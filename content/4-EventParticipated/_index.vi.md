@@ -6,40 +6,32 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
-> Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
-
-
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
-
 ### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+&emsp;**Tên sự kiện:** Cloud Mastery Series #1: Khám phá Generative AI
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+&emsp;**Thời gian:** 09:00 - 12:00, ngày 14/03/2026
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco Financial Tower, số 02 đường Hải Triều, Quận 1, TP. Ho Chi Minh
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò:** Người tham dự
+
+&emsp;**Mô tả:** Buổi workshop chuyên sâu dành cho cộng đồng sinh viên, tập trung vào các ứng dụng của Generative AI. Nội dung chính xoay quanh việc tích hợp các mô hình AI vào ứng dụng thực tế và tối ưu quy trình phát triển phần mềm.
+
+&emsp;**Kết quả đạt được:** Học được cách triển khai các tính năng do AI hỗ trợ vào dự án cá nhân (như EduTrust); đồng thời cải thiện kỹ năng giải quyết vấn đề thông qua thảo luận các tình huống ứng dụng AI cùng mentor và bạn học.
+
+---
 
 
 
 ### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+&emsp;**Tên sự kiện:** Cloud Mastery Series #2: DevOps Fundamentals & Infrastructure
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+&emsp;**Thời gian:** 09:00 - 12:00, ngày 04/04/2026
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco Financial Tower, số 02 đường Hải Triều, Quận 1, TP. Ho Chi Minh
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Vai trò:** Người tham dự
+
+&emsp;**Mô tả:** Phiên học tập trung vào các nguyên lý DevOps, bao gồm Infrastructure as Code (IaC), quy trình CI/CD và cách duy trì độ ổn định hệ thống trên nền tảng Cloud.
+
+&emsp;**Kết quả đạt được:** Có thêm kiến thức thực hành về các công cụ tự động hóa và hiểu rõ hơn cách tư duy DevOps hỗ trợ triển khai, mở rộng ứng dụng hiệu quả và đáng tin cậy hơn.

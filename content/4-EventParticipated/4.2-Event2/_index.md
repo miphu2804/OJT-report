@@ -6,121 +6,71 @@ chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
-
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Cloud Mastery Series: DevOps Fundamentals & Infrastructure
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+- Share best practices to address challenges in managing and operating systems at production scale (production workloads).
+- Introduce container orchestration, fault-tolerant architecture, and infrastructure automation concepts.
+- Introduce Elixir and practical use cases in modern infrastructure operations.
+- Guide compute decisions by comparing self-managed Kubernetes with managed services such as Amazon EKS.
+- Present modern toolsets including Helm, K9s, Mix, Observer, and Terraform.
 
-### Speakers
+### Speaker List & Detailed Content
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+#### 1. Bao Huynh - Junior Cloud Native Developer @ Endava (Kubernetes)
 
-### Key Highlights
+- **Topic:** Architecting for the Cloud with Kubernetes.
+- **Main content:**
+- **Challenge:** Manually managing thousands of containers in production is impractical, requiring self-healing and scalability.
+- **K8s architecture:** A deep dive into Control Plane (the control brain) and Worker Nodes (where workloads run).
+- **Core objects:** Pods, Deployments (update management), ConfigMaps, and Secrets (configuration/security management).
+- **Cloud solution:** Amazon EKS helps reduce the operational burden of managing cluster infrastructure.
 
-#### Identifying the drawbacks of legacy application architecture
+#### 2. Nguyen Ta Minh Triet - R&D Member @ ITea Lab (Elixir in DevOps)
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+- **Topic:** Elixir as a Unified Solution for Massively Concurrent & Fault-Tolerant Infrastructure.
+- **Main content:**
+- **Technology advantage:** Elixir runs on the BEAM VM, enabling millions of concurrent connections with lightweight processes.
+- **"Let It Crash" philosophy:** Instead of trying to catch every error, the system uses Supervision Trees to restart failed processes automatically.
+- **Economic impact:** A practical case study showed cost reduction from $30,000/month (Serverless Node.js/Lambda) to under $400/month after switching to Elixir.
+- **Integrated tools:** Mix (build tool), Hex (package manager), and Observer (real-time system monitoring).
 
-#### Transitioning to modern application architecture – Microservices
+#### 3. Thinh Nguyen - FCAJ Cloud Engineer Trainee (Infrastructure as Code)
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+- **Topic:** IaC with Terraform on AWS.
+- **Main content:**
+- **Problem:** ClickOps (manual console operations) is error-prone, inconsistent, and hard to collaborate on.
+- **IaC solution:** Use code to manage cloud resources for automation and reusability.
+- **Terraform & HCL:** HashiCorp's open-source tool using HCL to define multi-cloud infrastructure (AWS, Azure, GCP).
+- **Execution workflow:** Core commands include `init` (initialize), `plan` (preview changes), `apply` (deploy), and `destroy` (remove resources).
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+### What I Learned
 
-#### Domain-Driven Design (DDD)
+#### Automation Mindset
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+- Infrastructure should be defined as code so it can be versioned just like application source code.
 
-#### Event-Driven Architecture
+#### Fault Tolerance
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+- Designing systems with self-healing capability (as seen in Elixir and Kubernetes) is more important than trying to write code that never fails.
 
-#### Compute Evolution
+#### Cost Optimization
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
-
-#### Amazon Q Developer
-
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
-
-### Key Takeaways
-
-#### Design Mindset
-
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
-
-#### Technical Architecture
-
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
-
-#### Modernization Strategy
-
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+- Choosing the right technology (Elixir for highly concurrent workloads) and deployment model (EKS for Kubernetes) delivers strong ROI.
 
 ### Applying to Work
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- **EduTrust project:** Apply Terraform to set up standardized AWS infrastructure, making it easier to replicate Dev/Staging/Prod environments.
+- **Application deployment:** Package microservices into Docker and orchestrate with Kubernetes for high availability.
+- **Performance improvement:** Leverage functional programming principles and event-driven architecture from Elixir for real-time features.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Attending **"Cloud Mastery Series: DevOps Fundamentals & Infrastructure"** provided a very practical perspective on operating modern infrastructure with automation, fault tolerance, and cost efficiency.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+#### Practical exposure
+- Demo sessions with `kubectl` commands and Terraform `plan/apply` workflows helped clarify the day-to-day work of a cloud engineer.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
-
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+#### Multi-dimensional perspective
+- The combination of infrastructure (IaC), orchestration (Kubernetes), and a high-performance language (Elixir) formed a logical DevOps learning journey that is easy to apply in real projects.
