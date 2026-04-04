@@ -18,9 +18,9 @@ chapter: false
 
 &emsp; **Major:** Artificial Intelligence
 
-&emsp; **Class:** SE190348
+&emsp; **Student ID:** SE190348
 
-&emsp; **Internship Company:** Amazon Web Services Vietnam Company Limited
+&emsp; **Internship Company:** Bootcamp - First Cloud AI Journey @ AWS Study Group
 
 &emsp; **Internship Position:** FCAJ Cloud Intern
 

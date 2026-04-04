@@ -10,7 +10,7 @@ pre: " <b> 5. </b> "
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
 {{% /notice %}}
 
-During my internship at **Amazon Web Services Vietnam Company Limited** from **05/01/2026** to **05/04/2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
+During my internship at **Bootcamp - First Cloud AI Journey @ AWS Study Group** from **05/01/2026** to **05/04/2026**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
 I participated in **Cloud Mastery workshops, explored Infrastructure as Code (Terraform), Kubernetes, CI/CD practices, and completed internship report deliverables**, through which I improved my skills in **problem analysis, teamwork, professional communication, task planning, and progress-tracking tools**.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.

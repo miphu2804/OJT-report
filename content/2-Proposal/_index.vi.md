@@ -5,104 +5,136 @@ weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm. -->
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+# EduTrust — Nền tảng giám sát thi trực tuyến tích hợp AI  
+## Giải pháp Fullstack kết hợp AWS cho giám sát phòng thi và hỗ trợ học tập thông minh  
 
 ### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+EduTrust là một nền tảng quản lý thi trực tuyến được thiết kế cho môi trường giáo dục (trường học, trung tâm đào tạo), nhằm số hóa quy trình tổ chức thi, giám sát phòng thi bằng AI và hỗ trợ học tập thông qua chatbot thông minh. Hệ thống phục vụ 3 nhóm người dùng chính: **Admin** (nhà trường), **Giáo viên** (tạo đề thi, giám sát) và **Học sinh** (làm bài thi, xem kết quả). Backend sử dụng FastAPI (Python) kết hợp MongoDB, Redis, Amazon S3 và mô hình YOLO để phát hiện gian lận qua camera. Frontend xây dựng bằng Next.js với Tailwind CSS, triển khai trên AWS Amplify.  
 
 ### 2. Tuyên bố vấn đề  
 *Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Việc tổ chức thi trực tuyến tại các trường học gặp nhiều thách thức: giám sát thủ công tốn nhân lực, khó phát hiện gian lận (sử dụng điện thoại, nhiều người trong khung hình, rời khỏi camera), không có hệ thống tập trung để quản lý lớp học — đề thi — kết quả, và thiếu công cụ hỗ trợ học tập thông minh cho học sinh.  
 
 *Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+EduTrust cung cấp một nền tảng toàn diện bao gồm:  
+- **Quản lý lớp học & đề thi**: Admin tạo lớp, phân công giáo viên chủ nhiệm và giáo viên bộ môn; giáo viên tạo đề thi trắc nghiệm có mã bảo mật (secret key), thiết lập thời gian bắt đầu/kết thúc.  
+- **Giám sát phòng thi bằng AI**: Tích hợp YOLOv26n (object detection) để phát hiện vi phạm qua webcam thời gian thực — bao gồm phát hiện nhiều khuôn mặt (MULTIPLE_FACES), rời khỏi camera (FACE_DISAPPEARED: cell Phone), và vật cấm (FORBIDDEN_OBJECT). Ảnh vi phạm được tải lên Amazon S3 và ghi log vào MongoDB.  
+- **Chatbot AI hỗ trợ học tập**: Hệ thống multi-agent sử dụng Pydantic AI với các agent chuyên biệt (technical, social, general, web search) giúp học sinh tra cứu kiến thức, hỏi đáp và tìm kiếm tài liệu.  
+- **Xác thực & bảo mật**: JWT token (sử dụng Cognito) phân quyền theo vai trò (RBAC).  
 
 *Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+Giải pháp giúp giảm tải công việc giám sát thủ công cho giáo viên, nâng cao tính minh bạch và công bằng trong thi cử. Hệ thống tự động chấm điểm, ghi nhận vi phạm với bằng chứng hình ảnh, và cung cấp dashboard tổng hợp kết quả. Chi phí vận hành thấp nhờ tận dụng MongoDB Atlas (free tier), Redis Cloud, và AWS S3/Amplify. Ước tính chi phí hạ tầng AWS dưới 5 USD/tháng cho quy mô trường học vừa.  
 
 ### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Nền tảng áp dụng kiến trúc **Fullstack monorepo** với backend Python (FastAPI) và frontend Next.js, triển khai qua Docker container. Dữ liệu được lưu trữ trên MongoDB (collections: users, exams, classes, submissions, violations), cache session hội thoại trên Redis, và hình ảnh vi phạm trên Amazon S3.  
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+![Kiến trúc giải pháp EduTrust](/images/2-Proposal/edutrust-architect.png)
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+*Dịch vụ & công nghệ sử dụng (theo kiến trúc)*  
+- *AWS Amplify + CloudFront*: Hosting frontend Next.js và phân phối nội dung qua CDN.  
+- *AWS Route 53 + AWS ACM*: DNS và quản lý chứng chỉ TLS/HTTPS.  
+- *AWS WAF*: Bảo vệ lớp web trước các pattern tấn công phổ biến.  
+- *Amazon VPC (public/private subnet)*: Cô lập mạng, phân tách tầng public/private.  
+- *Application Load Balancer (ALB)*: Điều phối request vào backend.  
+- *Amazon EC2 Auto Scaling*: Vận hành backend theo tải với khả năng mở rộng tự động.  
+- *Amazon ECR*: Lưu trữ Docker image cho backend.  
+- *Amazon S3*: Lưu trữ ảnh vi phạm, log ALB và Terraform state.  
+- *Amazon DynamoDB*: Lưu trữ dữ liệu nhanh theo key-value (theo ảnh kiến trúc).  
+- *Amazon ElastiCache for Redis*: Cache session/hội thoại và dữ liệu truy cập nhanh.  
+- *Amazon Cognito*: Xác thực người dùng, phân quyền theo vai trò.  
+- *Amazon CloudWatch + VPC Flow Logs + SNS*: Giám sát, log và cảnh báo.  
+- *AWS KMS + SSM Parameter Store + PrivateLink*: Bảo mật secret và truy cập nội bộ.  
+- *Terraform + GitHub Actions*: IaC và CI/CD tự động hoá triển khai.  
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+*Công nghệ ứng dụng*  
+- *FastAPI*: Backend API framework — async, tự động tạo docs (Swagger/ReDoc).  
+- *Next.js 16 + Tailwind CSS v4*: Frontend SPA với App Router, server/client components.  
+- *YOLOv26n (Ultralytics)*: Mô hình object detection cho giám sát phòng thi.  
+- *Pydantic AI + LiteLLM*: Orchestrator multi-agent cho chatbot hỗ trợ học tập.  
+- *Docker*: Containerize backend với multi-stage build (Ubuntu 24.04).  
 
 *Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+- *Xác thực (Auth)*: JWT access/refresh token, session quản lý qua cookie, phân quyền RBAC (admin/teacher/student).  
+- *Quản lý lớp học*: phân công giáo viên chủ nhiệm/bộ môn, thêm/xóa học sinh, tự động cập nhật trạng thái (active/inactive).  
+- *Quản lý bài thi*: Tạo đề trắc nghiệm, mã bảo mật tự động, thời gian kiểm soát (start/end time), tự động chấm điểm khi nộp bài.  
+- *Giám sát camera (Detection)*: CameraService nhận frame từ client, ObjectDetector (YOLO) phát hiện vi phạm, ViolationLogger ghi log MongoDB + S3, ScreenshotUtils chụp ảnh bằng chứng.  
+- *AI Agent*: UnifiedAgent điều phối các sub-agent (technical, social, general, web_search) qua tool delegation, streaming response qua WebSocket.  
 
 ### 4. Triển khai kỹ thuật  
 *Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Dự án được chia thành 5 giai đoạn chính:  
+1. *Tìm hiểu dịch vụ AWS nền tảng*: Làm quen các dịch vụ trong kiến trúc (VPC, EC2/ALB/ASG, S3, ECR, Cognito, CloudWatch, KMS, SSM, WAF) và quy trình CI/CD/IaC.  
+2. *Nghiên cứu và thiết kế kiến trúc*: Nghiên cứu các công nghệ (FastAPI, Next.js, YOLO, Pydantic AI), thiết kế database schema, API contract và kiến trúc hệ thống.  
+3. *Phát triển core features*: Xây dựng hệ thống auth (JWT của cognito), CRUD lớp học, quản lý bài thi, chấm điểm tự động.  
+4. *Tích hợp AI & Camera*: Tích hợp YOLO cho phát hiện vi phạm, xây dựng hệ thống multi-agent chatbot, kết nối S3/Redis.  
+5. *Frontend & kiểm thử*: Hoàn thiện dashboard Next.js cho 3 vai trò, kiểm thử end-to-end và Docker hóa.  
 
 *Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+- *Backend*: Python ≥ 3.11, FastAPI, Motor (async MongoDB driver), Redis ≥ 5.0, Boto3 (AWS SDK), Ultralytics (YOLO), Pydantic AI + LiteLLM, Kreuzberg (document parsing), SlowAPI (rate limiting).  
+- *Frontend*: Next.js 16, React 19, Tailwind CSS v4, Lucide React (icons), React Markdown + KaTeX (render math), ONNX Runtime Web, next-intl (i18n).  
+- *Hạ tầng*: Docker (multi-stage build), MongoDB Atlas, Redis Cloud, Amazon S3, AWS Amplify, Logfire (observability).  
 
 ### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- *Tuần 1–2*: Tìm hiểu các dịch vụ AWS theo kiến trúc (VPC, EC2/ALB/ASG, S3, ECR, Cognito, CloudWatch, KMS/SSM, WAF) và quy trình CI/CD/IaC.  
+- *Tuần 3–4*: Nghiên cứu công nghệ, thiết kế kiến trúc và database schema.  
+- *Tuần 5–6*: Phát triển backend core (auth, classes, exams, submissions).  
+- *Tuần 7–8*: Tích hợp YOLO detection, AI chatbot (multi-agent), S3 storage.  
+- *Tuần 9*: Phát triển frontend dashboard (admin/teacher/student views).  
+- *Tuần 10*: Kiểm thử tích hợp, tối ưu hiệu năng và Docker hóa.  
 
 ### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+*Giả định theo kiến trúc*  
+- Môi trường nhỏ (staging/production nhỏ), lưu lượng thấp–trung bình.  
+- Backend chạy EC2 Auto Scaling (t3.small, 2 instance), ALB hoạt động 24/7.  
+- Frontend host trên Amplify + CloudFront, dùng WAF.  
+- Dữ liệu vi phạm lưu trên S3 (~10–20 GB/tháng).  
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+*Chi phí hạ tầng (hàng tháng – ước tính)*  
+- VPC Endpoints (Interface cho ECR/SSM/STS/Logs…): ~30–60 USD  
+- EC2 Auto Scaling (2 x t3.small): ~30–40 USD  
+- Application Load Balancer: ~16–25 USD  
+- Amazon S3 (ảnh vi phạm, log ALB, terraform state): ~2–6 USD  
+- Amazon CloudFront + Amplify: ~1–5 USD  
+- AWS WAF: ~5–10 USD  
+- Amazon ElastiCache (Redis – cache nhỏ): ~15–25 USD  
+- Amazon DynamoDB (low traffic): ~1–3 USD  
+- Amazon ECR (storage image): ~1–3 USD  
+- Amazon Cognito (<= 50k MAU): ~0–2 USD  
+- Amazon CloudWatch + VPC Flow Logs + SNS: ~5–10 USD  
+- AWS KMS + SSM Parameter Store: ~1–3 USD  
+- Data Transfer: ~2–6 USD  
+
+*Tổng dự kiến*: ~110–195 USD/tháng (đã tính VPC Endpoints; phụ thuộc lưu lượng và dung lượng S3)  
+
+*Chi phí API bên thứ ba*  
+- OpenAI/LiteLLM API: tuỳ usage.  
+- Các dịch vụ tìm kiếm ngoài (nếu dùng): tuỳ gói.  
 
 ### 7. Đánh giá rủi ro  
 *Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+- Độ chính xác YOLO thấp (false positive/negative): Ảnh hưởng cao, xác suất trung bình.  
+- Mất kết nối camera/mạng của học sinh: Ảnh hưởng trung bình, xác suất trung bình.  
+- Vượt ngân sách API (LLM calls): Ảnh hưởng trung bình, xác suất thấp.  
+- Chuyển từ MongoDB sang MySQL gây thay đổi schema & query phức tạp: Ảnh hưởng trung bình–cao, xác suất trung bình.  
 
 *Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+- YOLO: Điều chỉnh ngưỡng confidence (min 0.5), chỉ alert sau nhiều frame liên tiếp, cho phép giáo viên review vi phạm thủ công.  
+- Mạng: Client-side detection với ONNX Runtime Web (fallback), ghi log vi phạm locally và đồng bộ khi có mạng.  
+- Chi phí API: Rate limiting (SlowAPI), đặt budget alerts, sử dụng model nhẹ hơn cho tác vụ đơn giản.  
+- Database: Thiết kế lớp repository để trừu tượng hoá DB, chuẩn hoá schema, chuẩn bị script migrate dữ liệu nếu chuyển MySQL.  
 
 *Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+- Chuyển sang giám sát thủ công (giáo viên xem camera trực tiếp) nếu AI detection gặp sự cố.  
+- Sử dụng SQLite/local storage làm fallback nếu MongoDB Atlas không khả dụng.  
+- Docker image cho phép deploy nhanh trên bất kỳ cloud provider nào (không lock-in AWS).  
 
 ### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+*Cải tiến kỹ thuật*: Tự động hóa quy trình giám sát thi bằng AI (YOLO) thay thế giám sát thủ công. Tự động chấm điểm trắc nghiệm, ghi nhận vi phạm kèm bằng chứng hình ảnh trên S3. Chatbot AI multi-agent hỗ trợ học sinh học tập 24/7.  
+*Giá trị dài hạn*: Nền tảng có thể mở rộng cho nhiều trường học, hỗ trợ đa ngôn ngữ (next-intl), tích hợp thêm các loại đề thi (tự luận với AI chấm), và phát triển thành SaaS giáo dục hoàn chỉnh. Dữ liệu vi phạm tích lũy có thể dùng để cải thiện mô hình detection qua thời gian.
