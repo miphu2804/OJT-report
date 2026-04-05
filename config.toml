@@ -1,6 +1,6 @@
-baseURL = "/OJT-report/"
-relativeURLs = true
-canonifyURLs = false
+baseURL = "https://miphu2804.github.io/OJT-report/"
+relativeURLs = false
+canonifyURLs = true
 defaultContentLanguage = "en"
 
 # Change the default theme to be use when building the site with Hugo
