@@ -1,54 +1,35 @@
 ---
-title: "Tuần 9: Native AWS & Front-end"
-date: 2024-01-01
-weight: 1
+title: "Tuần 9: Amplify, WAF & Cognito"
+date: 2026-03-09
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-### Mục tiêu tuần 9:
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 9:
+* Triển khai cơ chế RAG (Retrieval-Augmented Generation) cho hệ thống AI.
+* Xây dựng giao diện Chatbot thông minh hỗ trợ học tập qua Pydantic AI.
+* Tối ưu hóa độ chính xác của AI dựa trên cơ sở tri thức bài giảng.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+|  | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ hai | Tìm hiểu Amplify và Amplify hosting front-end | 09/03 | 09/03 | - |
+| Thứ ba | Áp dụng Amplify để triển khai hosting, WAF và CDN | 10/03 | 10/03 | - |
+| Thứ tư | Hoàn thiện và tái cấu trúc thư mục Terraform | 11/03 | 11/03 | - |
+| Thứ năm | Chạy test toàn bộ dự án, sửa đổi cấu hình IaC cho phù hợp | 12/03 | 12/03 | - |
+| Thứ sáu | Thêm worklog vào report, tìm hiểu khác biệt giữa cấu hình manual JWT và Cognito | 13/03 | 13/03 | - |
+| Thứ bảy | Thay JWT bằng Cognito cho xác thực và quản lí user pool | 14/03 | 14/03 | - |
+| Chủ Nhật | Tổng kết và báo cáo tuần, phổ biến nội dung đã làm cho các thành viên | 15/03 | 15/03 | - |
 
 ### Kết quả đạt được tuần 9:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Nắm và triển khai Amplify hosting cho front-end.
+- Áp dụng Amplify để triển khai hosting, WAF và CDN.
+- Tái cấu trúc thư mục Terraform.
+- Chạy test toàn bộ dự án và điều chỉnh cấu hình IaC.
+- Bổ sung worklog vào report; hiểu khác biệt giữa JWT manual và Cognito.
+- Thay JWT bằng Cognito để xác thực và quản lí user pool.
+- Tổng kết, báo cáo và chia sẻ nội dung cho các thành viên.

@@ -1,54 +1,35 @@
 ---
-title: "Tuần 3: Backup & Chi phí"
-date: 2024-01-01
-weight: 1
+title: "Tuần 3: S3, Identity & Monitoring"
+date: 2026-01-15
+weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
-### Mục tiêu tuần 3:
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 3:
+* Phân tích nghiệp vụ chi tiết cho nền tảng EduTrust.
+* Thiết kế sơ đồ cơ sở dữ liệu NoSQL (MongoDB) và luồng xử lý AI.
+* Hoàn thiện tài liệu SRS (Software Requirements Specification).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+|  | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ hai | Tạo LinkedIn, tìm hiểu về S3 - S3 Glacier và các hình thức lưu trữ đảm bảo tối ưu chi phí | 19/01 | 19/01 | - |
+| Thứ ba | File sharing và phân quyền truy cập S3 | 20/01 | 20/01 | - |
+| Thứ tư | AWS Cognito cho xác thực, SSO (AWS Identity Center), AWS Organization | 21/01 | 21/01 | - |
+| Thứ năm | ElastiCache Redis và RDS | 22/01 | 22/01 | - |
+| Thứ sáu | AWS Cloudwatch và trực quan hóa log bằng Cloudwatch Alarm, AWS Grafana | 23/01 | 23/01 | - |
+| Thứ bảy | Setup EC2 private subnet, dùng NATGW để kết nối Internet, pull container từ Docker về<br>Cài đặt Cloudwatch Agent vào EC2 để giám sát docker log | 24/01 | 24/01 | - |
+| Chủ Nhật | Test thử tạo hạ tầng bằng Terraform qua các lệnh CLI | 25/01 | 25/01 | - |
 
 ### Kết quả đạt được tuần 3:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Nắm các phương án lưu trữ S3/S3 Glacier và tối ưu chi phí lưu trữ.
+- Thực hành chia sẻ file và phân quyền truy cập trên S3.
+- Hiểu cơ bản về xác thực và quản trị danh tính: Cognito, SSO (AWS Identity Center), AWS Organizations.
+- Nắm kiến thức nền về ElastiCache (Redis) và RDS.
+- Thiết lập giám sát và trực quan hóa log với CloudWatch Alarm và AWS Grafana.
+- Thực hành hạ tầng private subnet, NAT Gateway, pull container và giám sát Docker log bằng CloudWatch Agent.
+- Test tạo hạ tầng bằng Terraform qua CLI.

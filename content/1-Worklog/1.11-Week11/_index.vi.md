@@ -1,54 +1,33 @@
 ---
-title: "Tuần 11: Tối ưu & Pentest"
-date: 2024-01-01
-weight: 2
+title: "Tuần 11: Tối ưu, Pentest & Workshop"
+date: 2026-03-23
+weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-### Mục tiêu tuần 11:
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 11:
+* Tổng hợp kết quả đồ án và soạn thảo báo cáo chi tiết.
+* Rà soát toàn bộ quá trình thực hiện và tài liệu hướng dẫn.
+* Chuẩn bị nội dung thuyết trình kết quả đồ án trước nhóm.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+|  | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ hai | Tối ưu chi phí các dịch vụ | 23/03 | 23/03 | - |
+| Thứ ba | Sửa các lỗi logic trong flow CD, tối ưu tốc độ chạy GitHub Action | 24/03 | 24/03 | - |
+| Thứ tư | Cải thiện, sửa đổi kiến trúc sau khi được các anh chị mentor góp ý | 25/03 | 25/03 | - |
+| Thứ năm | Lên kế hoạch pentest ứng dụng | 26/03 | 26/03 | - |
+| Thứ sáu | Tìm hiểu quy trình pentest cơ bản | 27/03 | 27/03 | - |
+| Thứ bảy | Ghi nhận kết quả và sửa các lỗi bảo mật | 28/03 | 28/03 | - |
+| Chủ Nhật | Hoàn thiện phần workshop | 29/03 | 29/03 | - |
 
 ### Kết quả đạt được tuần 11:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Tối ưu chi phí dịch vụ và cải thiện hiệu năng pipeline CD.
+- Sửa lỗi logic CI/CD và tinh chỉnh kiến trúc theo góp ý mentor.
+- Lập kế hoạch và nắm quy trình pentest cơ bản.
+- Ghi nhận kết quả pentest và khắc phục lỗi bảo mật.
+- Hoàn thiện phần workshop.

@@ -1,54 +1,35 @@
 ---
-title: "Tuần 2: Tìm hiểu mạng & kết nối"
-date: 2024-01-01
-weight: 1
+title: "Tuần 2: EC2, Storage & IaC/CI-CD"
+date: 2026-01-08
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-### Mục tiêu tuần 2:
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 2:
+* Làm quen các dịch vụ AWS Core cần thiết cho đồ án (IAM, EC2, S3).
+* Cấu hình AWS CLI để quản trị tài nguyên qua dòng lệnh.
+* Thử nghiệm lưu trữ và truy xuất tệp tin trên S3.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+|  | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ hai | AWS CLI + Tiếp tục học về IaC | 12/01 | 12/01 | - |
+| Thứ ba | AWS EC2 (AMI, Instance Type,...) + EFS/FSX + Lightsail | 13/01 | 13/01 | - |
+| Thứ tư | EBS + User data + Metadata | 14/01 | 14/01 | - |
+| Thứ năm | Auto Scaling Group (Lab tạo EC2 bằng ASG), Pricing option (On-demand, Reversed instance, Saving plans, Spot, ), Quản lí tài nguyên theo tag | 15/01 | 15/01 | - |
+| Thứ sáu | Tìm hiểu về Terraform (basic cmd, cách hoạt động, lưu trữ state,...) | 16/01 | 16/01 | - |
+| Thứ bảy | Lab về AWS EC2, Hosting Static Web using S3 + Cloudfront, cấu trúc CI/CD (Github Action, Jenkin,...) | 17/01 | 17/01 | - |
+| Chủ Nhật | Ôn tập kiến thức, xem video hướng dẫn vẽ kiến trúc AWS, tiếp tục tìm hiểu CI/CD để giảm thiểu manual deploy | 18/01 | 18/01 | - |
 
 ### Kết quả đạt được tuần 2:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Nắm vững thao tác AWS CLI và cách kết hợp với IaC.
+- Hiểu các dịch vụ compute và storage: EC2 (AMI, Instance Type), EBS, EFS/FSx, Lightsail; kèm các khái niệm user data và metadata.
+- Thực hành Auto Scaling Group, phân tích các lựa chọn chi phí (On-demand, Reserved Instance, Savings Plans, Spot) và quản lí tài nguyên theo tag.
+- Nắm kiến thức Terraform cơ bản (command, cách hoạt động, state).
+- Thực hành hosting Static Web trên S3 + CloudFront.
+- Nắm tổng quan CI/CD (GitHub Actions, Jenkins) để giảm thao tác triển khai thủ công.
+- Ôn tập và xem hướng dẫn vẽ kiến trúc AWS, hệ thống lại kiến thức đã học.

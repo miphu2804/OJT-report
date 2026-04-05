@@ -1,54 +1,34 @@
 ---
-title: "Tuần 10: Hoàn thiện kiến trúc"
-date: 2024-01-01
-weight: 2
+title: "Tuần 10: CI/CD, Kiến trúc & Workshop"
+date: 2026-03-16
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-### Mục tiêu tuần 10:
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 10:
+* Thiết lập hệ thống giám sát hiệu suất và log thời gian thực qua CloudWatch.
+* Tối ưu bảo mật hạ tầng và quy trình sao lưu dữ liệu tự động.
+* Kiểm tra khả năng chịu tải (Stress Test) của hệ thống EduTrust.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+|  | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ hai | Xem lại và chỉnh sửa kiến trúc CI/CD | 16/03 | 16/03 | - |
+| Thứ ba | Tìm hiểu kiến trúc Production/Staging | 17/03 | 17/03 | - |
+| Thứ tư | Tối ưu luồng từ Client đến Server | 18/03 | 18/03 | - |
+| Thứ năm | Viết workshop cho dự án | 19/03 | 19/03 | - |
+| Thứ sáu | Hoàn thiện dần và chỉnh sửa kiến trúc AWS, CI/CD | 20/03 | 20/03 | - |
+| Thứ bảy | Review flow chạy của kiến trúc từ Client - Server và flow CI/CD | 21/03 | 21/03 | - |
+| Chủ Nhật | Tổng kết tuần và báo cáo, viết workshop | 22/03 | 22/03 | - |
 
 ### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Rà soát và chỉnh sửa kiến trúc CI/CD.
+- Hiểu kiến trúc Production/Staging.
+- Tối ưu luồng xử lí từ Client đến Server.
+- Viết và hoàn thiện workshop cho dự án.
+- Hoàn thiện dần kiến trúc AWS và CI/CD, review flow tổng thể.
+- Tổng kết và báo cáo tuần.

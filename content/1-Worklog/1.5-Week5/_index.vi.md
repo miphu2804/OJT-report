@@ -1,54 +1,35 @@
 ---
-title: "Tuần 5: Giám sát & Bảo mật"
-date: 2024-01-01
-weight: 1
+title: "Tuần 5: ECR, Monitoring & WAF"
+date: 2026-01-29
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-### Mục tiêu tuần 5:
+{{% notice warning %}}
+⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+{{% /notice %}}
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 5:
+* Nghiên cứu tích hợp mô hình YOLO để giám sát camera phòng thi.
+* Thiết kế kiến trúc AI Agentic Workflow cho chatbot hỗ trợ học tập.
+* Thực hiện thử nghiệm nhận diện vật thể cơ bản (điện thoại, khuôn mặt).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+|  | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| Thứ hai | Ứng dụng ECR trong việc tạo repo và lưu trữ image<br><strong>Ý tưởng:</strong> Dùng ECR để lưu trữ backend image sau khi được docker đóng gói | 02/02 | 02/02 | - |
+| Thứ ba | Thiết lập CloudWatch log management, alarm và metrics, Security Hub | 03/02 | 03/02 | - |
+| Thứ tư | Tìm hiểu về WAF để bảo vệ tầng Application | 04/02 | 04/02 | - |
+| Thứ năm | Brainstorm lại topic project và kiến trúc dự án | 05/02 | 05/02 | - |
+| Thứ sáu | Tìm hiểu Kiro, MCP và Kiro-CLI - Gợi ý kiến trúc dự án dựa trên source code | 06/02 | 06/02 | - |
+| Thứ bảy | Ôn tập kiến thức cơ bản về VPC, EC2, CloudWatch và IaC, CI/CD | 07/02 | 07/02 | - |
+| Chủ Nhật | Tìm hiểu về cơ chế Instance Refresh của ASG<br><strong>Ý tưởng:</strong> Dùng Instance Refresh để đồng bộ versioning giữa các host mỗi khi có update | 08/02 | 08/02 | - |
 
 ### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+- Ứng dụng ECR để tạo repo và lưu trữ image cho backend.
+- Thiết lập CloudWatch log management, alarm/metrics và Security Hub.
+- Nắm vai trò của WAF trong bảo vệ tầng ứng dụng.
+- Brainstorm lại topic và kiến trúc dự án theo hướng phù hợp.
+- Tìm hiểu Kiro, MCP, Kiro-CLI để gợi ý kiến trúc từ source code.
+- Ôn tập VPC, EC2, CloudWatch, IaC, CI/CD.
+- Hiểu cơ chế Instance Refresh của ASG và định hướng áp dụng đồng bộ versioning.
