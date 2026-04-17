@@ -27,7 +27,7 @@ pre: " <b> 3. </b> "
 
 &emsp;**Date & Time:** 09:00 - 12:00, April 04, 2026  
 
-&emsp;**Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, District 1, Ho Chi Minh City  
+&emsp;**Location:** FPT University HCM - Academic A Hall  
 
 &emsp;**Role:** Attendee  
 

@@ -28,7 +28,7 @@ pre: " <b> 3. </b> "
 
 &emsp;**Thời gian:** 09:00 - 12:00, ngày 04/04/2026
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco Financial Tower, số 02 đường Hải Triều, Quận 1, TP. Ho Chi Minh
+&emsp;**Địa điểm:** Đại học FPT HCM - Sảnh Academic A
 
 &emsp;**Vai trò:** Người tham dự
 
