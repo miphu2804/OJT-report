@@ -14,7 +14,7 @@ EduTrust là hệ thống hỗ trợ học tập và giám sát thi bằng AI Ca
 
 Internet → Amplify → Application Load Balancer → EC2 Auto Scaling → Backend services
 
-![Kiến trúc EduTrust](edutrust-architect-v2.png)
+![Kiến trúc EduTrust](edutrust-architect.png)
 
 #### Thành phần chính (theo layer)
 

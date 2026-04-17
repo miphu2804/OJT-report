@@ -1,0 +1,12 @@
+{{- $src := .Destination -}}
+{{- $pageResource := .Page.Resources.GetMatch $src -}}
+{{- if $pageResource -}}
+  {{- $src = printf "%s?v=20260418" $src -}}
+{{- else -}}
+  {{- if or (hasPrefix $src "http://") (hasPrefix $src "https://") (hasPrefix $src "//") -}}
+    {{- $src = $src -}}
+  {{- else -}}
+    {{- $src = $src | absURL -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . | safeHTMLAttr }}"{{ end }}>
