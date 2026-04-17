@@ -16,8 +16,7 @@ In this workshop, we provision infrastructure with Terraform in CI/CD, configure
 The workflow is organized into:
 
 - **Infrastructure**: VPC, ALB, EC2 Auto Scaling, S3, ECR, IAM via Terraform and output validation.  
-- **Application**: Frontend via Amplify and backend via pipeline, plus environment variables and secrets.  
-- **Monitoring & Security**: WAF, CloudWatch alarms, and SNS notifications.
+- **Application**: Frontend via Amplify and backend via pipeline, plus environment variables and secrets.
 
 #### Content
 
@@ -27,5 +26,4 @@ The workflow is organized into:
 4. [Config & Secrets](4.4-config-secrets/)
 5. [CI/CD Guide](4.5-cicd-pipeline/)
 6. [Frontend Deployment & Security](4.6-frontend-deployment-security/)
-7. [CloudWatch Monitoring & SNS Alerts](4.7-observability-validation/)
-8. [Cleanup](4.8-cleanup/)
+7. [Cleanup](4.8-cleanup/)

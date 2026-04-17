@@ -24,7 +24,6 @@ Quy trình được chia thành các phần chính:
 
 + **Hạ tầng** - Tạo VPC, ALB, EC2 Auto Scaling, S3, ECR, IAM bằng Terraform và xác minh outputs.
 + **Ứng dụng** - Deploy frontend qua Amplify và backend services qua pipeline, cấu hình biến môi trường và secrets.
-+ **Giám sát & bảo mật** - Bật WAF, cấu hình CloudWatch alarms, và thiết lập cảnh báo qua SNS.
 
 #### Nội dung
 
@@ -34,5 +33,4 @@ Quy trình được chia thành các phần chính:
 4. [Cấu hình & Secrets](4.4-config-secrets/)
 5. [Hướng dẫn chạy CI/CD](4.5-cicd-pipeline/)
 6. [Frontend Deployment & Security](4.6-frontend-deployment-security/)
-7. [Observability & Validation](4.7-observability-validation/)
-8. [Dọn dẹp](4.8-cleanup/)
+7. [Dọn dẹp](4.8-cleanup/)
