@@ -11,7 +11,7 @@ pre: " <b> 3. </b> "
 
 &emsp;**Thời gian:** 09:00 - 12:00, ngày 14/03/2026
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco Financial Tower, số 02 đường Hải Triều, Quận 1, TP. Ho Chi Minh
+&emsp;**Địa điểm:** FPT University HCM - Academic A Hall
 
 &emsp;**Vai trò:** Người tham dự
 
@@ -35,3 +35,18 @@ pre: " <b> 3. </b> "
 &emsp;**Mô tả:** Phiên học tập trung vào các nguyên lý DevOps, bao gồm Infrastructure as Code (IaC), quy trình CI/CD và cách duy trì độ ổn định hệ thống trên nền tảng Cloud.
 
 &emsp;**Kết quả đạt được:** Có thêm kiến thức thực hành về các công cụ tự động hóa và hiểu rõ hơn cách tư duy DevOps hỗ trợ triển khai, mở rộng ứng dụng hiệu quả và đáng tin cậy hơn.
+
+---
+
+### [Event 3](4.3-Event3/)
+&emsp;**Tên sự kiện:** Cloud Mastery Series #3: Security
+
+&emsp;**Thời gian:** 09:00 - 12:00, ngày 11 tháng 04 năm 2026
+
+&emsp;**Địa điểm:** Đại học FPT HCM - Sảnh Academic A
+
+&emsp;**Vai trò:** Người tham dự
+
+&emsp;**Mô tả:** Buổi workshop tập trung vào bảo mật AWS theo hướng thực hành, từ Networking và IAM đến các lớp phòng thủ nâng cao. Nội dung được truyền tải qua demo trực tiếp và video minh họa để dễ liên hệ với các tình huống triển khai thực tế.
+
+&emsp;**Kết quả đạt được:** Hiểu rõ hơn cách thiết kế bảo mật AWS ngay từ đầu, áp dụng nguyên tắc Least Privilege và kết hợp nhiều lớp bảo vệ khi xây dựng, vận hành hệ thống cloud.

@@ -12,7 +12,7 @@ pre: " <b> 3. </b> "
 
 &emsp;**Date & Time:** 09:00 - 12:00, March 14, 2026  
 
-&emsp;**Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, District 1, Ho Chi Minh City  
+&emsp;**Location:** FPT University HCM - Academic A Hall  
 
 &emsp;**Role:** Attendee  
 
@@ -34,3 +34,18 @@ pre: " <b> 3. </b> "
 &emsp;**Description:** This session focused on DevOps principles, including Infrastructure as Code (IaC), CI/CD pipelines, and maintaining system stability on the Cloud platform.  
 
 &emsp;**Outcomes:** Gained hands-on knowledge of automation tools and understood how a DevOps mindset helps in deploying and scaling applications more efficiently and reliably.  
+
+---
+
+### [Event 3](4.3-Event3/)  
+&emsp;**Event Name:** Cloud Mastery Series #3: Security  
+
+&emsp;**Date & Time:** 09:00 - 12:00, April 11, 2026  
+
+&emsp;**Location:** FPT University HCM - Academic A Hall  
+
+&emsp;**Role:** Attendee  
+
+&emsp;**Description:** A practical workshop centered on AWS security, from networking and identity management to layered defense. The session tied the concepts to real-world implementation through live demos and video walkthroughs.  
+
+&emsp;**Outcomes:** Gained a clearer view of how to design AWS security from the start, apply least privilege, and combine multiple layers of protection when building and operating cloud systems.  
