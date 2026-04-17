@@ -1,6 +1,6 @@
 {{- $src := .Destination -}}
 {{- $pageResource := .Page.Resources.GetMatch $src -}}
 {{- if $pageResource -}}
-  {{- $src = printf "%s?v=20260418" $pageResource.RelPermalink -}}
+  {{- $src = printf "%s?v=20260418" $src -}}
 {{- end -}}
 <img src="{{ $src | safeURL }}" alt="{{ .Text }}"{{ with .Title }} title="{{ . | safeHTMLAttr }}"{{ end }}>
