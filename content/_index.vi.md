@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày  05/01/2026 đến ngày 05/04/2026
 
-![Ảnh đại diện của bạn](/images/mphu.png)
+<p><img src="../images/mphu.png" alt="Ảnh đại diện của bạn"></p>
 
 
 

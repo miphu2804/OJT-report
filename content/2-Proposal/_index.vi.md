@@ -28,7 +28,7 @@ Giải pháp giúp giảm tải công việc giám sát thủ công cho giáo vi
 ### 3. Kiến trúc giải pháp  
 Nền tảng áp dụng kiến trúc **Fullstack monorepo** với backend Python (FastAPI) và frontend Next.js, triển khai qua Docker container. Dữ liệu được lưu trữ trên MongoDB (collections: users, exams, classes, submissions, violations), cache session hội thoại trên Redis, và hình ảnh vi phạm trên Amazon S3.  
 
-![Kiến trúc giải pháp EduTrust](/images/2-Proposal/edutrust-architect.png)
+<p><img src="../images/2-Proposal/edutrust-architect.png" alt="Kiến trúc giải pháp EduTrust"></p>
 
 *Dịch vụ & công nghệ sử dụng (theo kiến trúc)*  
 - *AWS Amplify + CloudFront*: Hosting frontend Next.js và phân phối nội dung qua CDN.  

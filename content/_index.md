@@ -26,7 +26,7 @@ chapter: false
 
 &emsp; **Internship Duration:** From 05/01/2026 to 05/04/2026
 
-![Your profile picture](/images/mphu.png)
+<p><img src="images/mphu.png" alt="Your profile picture"></p>
 
 ### Report Content
 
